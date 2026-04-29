@@ -113,8 +113,7 @@ export default function SiedaApp() {
       setIsModalOpen(false);
       setNewAd({ model: '', price: '', image: '' });
       setIdCardImage(null);
-      setSelfieImage(null);
-      alert("تم إرسال إعلانك للمراجعة بنجاح");
+      setSelfieImage(null
     } catch (error) {
       alert("حدث خطأ أثناء الرفع: " + error.message);
     } finally {
