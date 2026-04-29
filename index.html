@@ -1,10 +1,84 @@
-// لا توجد رسائل alert هنا لكي يفتح التطبيق مباشرة
-document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById("mainBtn");
-    if (btn) {
-        btn.addEventListener("click", function() {
-            alert("رائع! الزر يعمل والتطبيق أصبح سريعاً.");
-        });
-    }
-    console.log("التطبيق جاهز!");
-});
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق الأجهزة - السودان</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
+        .navbar { background-color: #2c3e50; }
+        .card-product { border: none; border-radius: 15px; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card-product:hover { transform: translateY(-5px); }
+        .btn-verify { background-color: #27ae60; color: white; border-radius: 20px; }
+        .price-tag { color: #e67e22; font-weight: bold; font-size: 1.2rem; }
+        .badge-verified { background-color: #3498db; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark sticky-top p-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">سوق الأجهزة والـموبايلات</a>
+            <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#verifyModal">توثيق الحساب</button>
+        </div>
+    </nav>
+
+    <header class="bg-white py-4 mb-4 shadow-sm">
+        <div class="container text-center">
+            <h2 class="mb-3">ابحث عن جهازك القادم</h2>
+            <div class="input-group mb-3 w-75 mx-auto">
+                <input type="text" class="form-control" placeholder="مثلاً: آيفون 14، غسالة LG...">
+                <button class="btn btn-primary" type="button">بحث</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card card-product h-100">
+                    <img src="https://via.placeholder.com/300x300.png?text=iPhone+15" class="card-img-top p-3" alt="موبايل">
+                    <div class="card-body">
+                        <span class="badge badge-verified mb-2">بائع موثوق ✓</span>
+                        <h6 class="card-title">iPhone 15 Pro Max</h6>
+                        <p class="text-muted small">حالة الجهاز: جديد (كرتونة)</p>
+                        <p class="price-tag">850,000 ج.س</p>
+                        <button class="btn btn-sm btn-dark w-100">تفاصيل المنتج</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card card-product h-100">
+                    <img src="https://via.placeholder.com/300x300.png?text=Smart+TV" class="card-img-top p-3" alt="شاشة">
+                    <div class="card-body">
+                        <h6 class="card-title">شاشة سامسونج 55 بوصة</h6>
+                        <p class="text-muted small">حالة الجهاز: مستعمل نظيف</p>
+                        <p class="price-tag">420,000 ج.س</p>
+                        <button class="btn btn-sm btn-dark w-100">تفاصيل المنتج</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="verifyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">توثيق الحساب (بائع موثوق)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>لضمان الأمان، يرجى رفع فيديو مدته 10 ثوانٍ يظهر هويتك أو المحل الخاص بك.</p>
+                    <input type="file" accept="video/*" class="form-control mb-3">
+                    <button class="btn btn-verify w-100">إرسال للتدقيق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
