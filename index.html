@@ -1,10 +1,32 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // هذا الكود يربط الزر الأزرق بوظيفة معينة
-    const button = document.querySelector("button");
-    if (button) {
-        button.addEventListener("click", function() {
-            alert("أهلاً بك! لقد نجحت في تشغيل الزر داخل تطبيقك الخاص.");
-        });
-    }
-    console.log("التطبيق يعمل بنجاح!");
-});
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siedaApp</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; max-width: 90%; }
+        h1 { color: #333; font-size: 24px; }
+        p { color: #666; margin-bottom: 20px; }
+        .btn { background: #007bff; color: white; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-size: 18px; width: 100%; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🚀 مرحباً بك في تطبيقك!</h1>
+        <p>التطبيق الآن يعمل بشكل سليم وبدون رسائل تلقائية.</p>
+        <button class="btn" onclick="sayHello()">اضغط هنا</button>
+    </div>
+
+    <script>
+        // هذا الكود مخفي ولن يظهر كـ نص على الشاشة
+        function sayHello() {
+            alert("رائع! لقد قمت بإصلاح التطبيق بنجاح.");
+        }
+        console.log("App is running perfectly!");
+    </script>
+
+</body>
+</html>
